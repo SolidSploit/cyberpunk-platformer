@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Drone : MonoBehaviour
 {
+    public PlayerMovement player;
     public float speed, distanceX, distanceY; 
     public Rigidbody2D rb;
     public PolygonCollider2D collider;
@@ -29,7 +30,7 @@ public class Drone : MonoBehaviour
     {
        if(collision.tag == "Player")
         {
-            //damage player
+            player.GetHurt();
         }
        else if(collision.tag == "Projectile")
         {
@@ -61,5 +62,10 @@ public class Drone : MonoBehaviour
                 FollowPlayer();
             }
         }
+    }
+
+    private void FireProjectile()
+    {
+        //shoot stuff
     }
 }
