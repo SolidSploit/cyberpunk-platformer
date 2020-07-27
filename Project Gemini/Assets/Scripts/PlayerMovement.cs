@@ -27,11 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumps;
 
     public int ExtraJumpsValue;
-    
-
-    //when moving the player we need to know at which speed we want to move it
-    private float runSpeed = 10f;
-    float horizontalInput = 0f;
 
 
 
