@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\dlpon\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dlpon\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Project Gemini.-1887491020.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dlpon\Desktop\cyberpunk-platformer\Project Gemini" t="IncludeRecursive">
+    <e p="C:\Users\dlpon\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Project Gemini.-561629190.00" t="ExcludeRecursive" />
+    <e p="C:\Users\dlpon\OneDrive\Documents\cyberpunk-platformer\Project Gemini" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Explosions Pack 2 files" t="Include">
           <e p="readme.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Drone.cs" t="Include" />
+          <e p="DroneProjectile.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="TitleScreen.cs" t="Include" />
         </e>
         <e p="warped city files" t="Include">
           <e p="demo" t="Include">
