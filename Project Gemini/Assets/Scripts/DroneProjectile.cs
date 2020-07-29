@@ -32,7 +32,7 @@ public class DroneProjectile : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            player.GetHurt();
+           
             Destroy(this.gameObject);
         }
     }

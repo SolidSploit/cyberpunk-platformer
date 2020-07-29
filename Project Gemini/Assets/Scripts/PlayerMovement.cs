@@ -99,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("PLAYER HEALTH: " + health);
     }
 
+
     public void GetHurt()
     {
 
