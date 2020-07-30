@@ -14,6 +14,7 @@ public class DroneProjectile : MonoBehaviour
     void Start()
     {
         speed = 10;
+        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         target = GameObject.Find("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
@@ -32,7 +33,7 @@ public class DroneProjectile : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-           
+            player.GetHurt();
             Destroy(this.gameObject);
         }
     }

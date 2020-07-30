@@ -95,19 +95,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-
-        Debug.Log("PLAYER HEALTH: " + health);
     }
-
 
     public void GetHurt()
     {
-
         health -= 25;
-        if(health <= 0)
+        Debug.Log("HEALTH: " + health);
+        if (health <= 0)
         {
             Destroy(this.gameObject);
         }
-        
     }
 }

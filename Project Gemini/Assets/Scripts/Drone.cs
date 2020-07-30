@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Drone : MonoBehaviour
 {
+    public GameObject projectile;
     public PlayerMovement player;
-    public float speed, distanceX, distanceY; 
+    public float speed, distanceX, distanceY, fireRate = .75f, nextFire = 0f; 
     public Rigidbody2D rb;
     public PolygonCollider2D collider;
     private Transform target;
@@ -18,6 +19,7 @@ public class Drone : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<PolygonCollider2D>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     
@@ -61,11 +63,20 @@ public class Drone : MonoBehaviour
             {
                 FollowPlayer();
             }
+            else
+            {
+                FireProjectile();
+            }
         }
     }
 
-    private void FireProjectile()
+    void FireProjectile()
     {
-        //shoot stuff
+        if(Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            GameObject clone = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+
+        }
     }
 }
