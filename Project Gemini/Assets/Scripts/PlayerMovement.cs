@@ -99,8 +99,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetHurt()
     {
-        health -= 25;
-        Debug.Log("HEALTH: " + health);
+        health -= 10;
+        //Debug.Log("HEALTH: " + health);
         if (health <= 0)
         {
             Destroy(this.gameObject);
