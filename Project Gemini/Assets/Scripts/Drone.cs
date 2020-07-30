@@ -10,6 +10,7 @@ public class Drone : MonoBehaviour
     public float speed, distanceX, distanceY, fireRate = .75f, nextFire = 0f; 
     public Rigidbody2D rb;
     public PolygonCollider2D collider;
+    public Animator anim;
     private Transform target;
 
 
@@ -20,11 +21,14 @@ public class Drone : MonoBehaviour
         collider = GetComponent<PolygonCollider2D>();
         target = GameObject.Find("Player").GetComponent<Transform>();
         player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        anim = GetComponent<Animator>();
     }
 
     
     void Update()
     {
+        anim.SetFloat("moveX", target.transform.position.x - transform.position.x);
+        Debug.Log(target.transform.position.x - transform.position.x);
         CheckDistance();
     }
 
@@ -37,6 +41,7 @@ public class Drone : MonoBehaviour
        else if(collision.tag == "Projectile")
         {
             //Destroy(this.Gameobject);
+            anim.SetTrigger("explode");
         }
     }
 
