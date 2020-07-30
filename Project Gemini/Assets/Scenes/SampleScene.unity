@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 9, z: -10}
+  m_LocalPosition: {x: 25, y: 9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12816,6 +12816,7 @@ GameObject:
   - component: {fileID: 1706206673}
   - component: {fileID: 1706206672}
   - component: {fileID: 1706206674}
+  - component: {fileID: 1706206675}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -12954,6 +12955,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.23}
   m_EdgeRadius: 0
+--- !u!114 &1706206675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706206669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fb508626716f04cbf766177a73c098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceX: 0
+  distanceY: 0
+  fireRate: 0.25
+  nextFire: 0
+  player: {fileID: 0}
+  projectile: {fileID: 6557194235706626681, guid: e4be6248e84f69e4d8ca28423c5f7234,
+    type: 3}
+  target: {fileID: 0}
+  collider: {fileID: 0}
 --- !u!1 &1832744879
 GameObject:
   m_ObjectHideFlags: 0
@@ -12983,7 +13005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832744879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.562, y: 9.39, z: 0}
+  m_LocalPosition: {x: 15.5, y: 9.99, z: 0}
   m_LocalScale: {x: 0.7669404, y: 0.9528637, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13075,7 +13097,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1832744885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13144,12 +13166,12 @@ PrefabInstance:
     - target: {fileID: 8803764291722792441, guid: aa93787e829afb64f81c1903b727f016,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.44
+      value: 43.97
       objectReference: {fileID: 0}
     - target: {fileID: 8803764291722792441, guid: aa93787e829afb64f81c1903b727f016,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.98
+      value: 13.88
       objectReference: {fileID: 0}
     - target: {fileID: 8803764291722792441, guid: aa93787e829afb64f81c1903b727f016,
         type: 3}
@@ -13200,6 +13222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: drone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803764291722792443, guid: aa93787e829afb64f81c1903b727f016,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa93787e829afb64f81c1903b727f016, type: 3}
