@@ -89,6 +89,15 @@ public class PlayerMovement : MonoBehaviour
         } 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Ladder")
+        {
+            _rigid.gravityScale = 0;
+            
+        }
+    }
+
     void Flip()
     {
         facingRight = !facingRight;
