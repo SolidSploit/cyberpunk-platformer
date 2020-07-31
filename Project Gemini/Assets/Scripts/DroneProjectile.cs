@@ -23,7 +23,14 @@ public class DroneProjectile : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
     }
 
-    
+    private void Update()
+    {
+        if (transform.position.y < -10 || transform.position.y > 25 || transform.position.x < -20 || transform.position.x > 75)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
