@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.WSA.Input;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int health;
+    public int health, points, ammo;
+    public Text pointsText, ammoText, healthText;
     //we need a reference to our Rigidbody to move the player w/ Unity's physics engine
     private Rigidbody2D _rigid;
 
@@ -86,7 +88,9 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true) 
         {
             _rigid.velocity = Vector2.up * jumpForce;
-        } 
+        }
+
+        HudUpdate();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,6 +100,13 @@ public class PlayerMovement : MonoBehaviour
             _rigid.gravityScale = 0;
             
         }
+    }
+
+    void HudUpdate()
+    {
+        healthText.text = "HEALTH: " + health;
+        ammoText.text = "AMMO: " + ammo;
+        pointsText.text = "POINTS: " + points;
     }
 
     void Flip()
